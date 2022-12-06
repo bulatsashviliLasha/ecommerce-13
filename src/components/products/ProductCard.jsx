@@ -63,7 +63,7 @@ class ProductCard extends Component {
           </p>
 
           <p className="product-price">
-            {productPriceCurrency.currency.symbol} {productPriceCurrency.amount}
+            {productPriceCurrency.currency.symbol}{productPriceCurrency.amount}
           </p>
         </>
       </Link>

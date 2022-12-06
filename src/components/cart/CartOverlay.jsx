@@ -53,26 +53,33 @@ class CartOverlay extends Component {
             >
               {this.state.qty > 0 ? (
                 <>
-                  <p className="mini-cart-heading">
-                    My Bag, {this.state.qty} item{this.state.qty > 1 ? 's' : ''}
-                  </p>
+                  <div style={{
+                    maxHeight: '70vh',
+                    overflowY: 'auto',
+                    marginBottom: '32px',
 
-                  {this.props.cart &&
-                    this.props.cart.items.map((item, i) => {
-                      return (
-                        <CartItemLarge
-                          key={'mini' + item.id + i}
-                          product={item}
-                          isMiniCart={true}
-                        />
-                      );
-                    })}
-                  <div className="mini-cart-totals">
-                    <p className="mini-cart-total-value">Total:</p>
-                    <p className="mini-cart-total-value">
-                      {this.props.selectedCurrency.symbol}
-                      {this.state.total}
+                  }}>
+                    <p className="mini-cart-heading">
+                      My Bag, {this.state.qty} item{this.state.qty > 1 ? 's' : ''}
                     </p>
+
+                    {this.props.cart &&
+                      this.props.cart.items.map((item, i) => {
+                        return (
+                          <CartItemLarge
+                            key={'mini' + item.id + i}
+                            product={item}
+                            isMiniCart={true}
+                          />
+                        );
+                      })}
+                    <div className="mini-cart-totals">
+                      <p className="mini-cart-total-value">Total:</p>
+                      <p className="mini-cart-total-value">
+                        {this.props.selectedCurrency.symbol}
+                        {this.state.total}
+                      </p>
+                    </div>
                   </div>
 
                   <div className="mini-cart-btns">

@@ -1,5 +1,5 @@
 .my-cart-wrapper{
-    padding: 0 20px;
+    padding: 0 20px 20px;
     max-width: 1300px;
     margin: 0 auto;
 }
@@ -176,12 +176,11 @@
 .mini-cart{
     position: absolute;
     width: 325px;
-    max-height: 45vh;
+    max-height: 85vh;
     padding: 32px 16px;
     margin-top: 1px;
     right: -7%;
     background-color: white;
-    overflow-y: auto;
 }
 
 

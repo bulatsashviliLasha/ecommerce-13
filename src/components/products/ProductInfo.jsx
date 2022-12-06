@@ -48,7 +48,7 @@ class ProductInfo extends Component {
           product.attributes.map((attribute, i) => {
             return (
               <Fragment key={product.id + attribute.name + i}>
-                <p className="product-label">{attribute.name}</p>
+                <p className="product-label">{attribute.name}:</p>
                 <div className="product-attribute-container">
                   {attribute.items.map((item, i) => {
                     return (
@@ -89,7 +89,7 @@ class ProductInfo extends Component {
           <></>
         )}
 
-        <p className="product-label">Price</p>
+        <p className="product-label">Price:</p>
         <p className="product-price">
           {productPrice.currency.symbol + ' '}
           {productPrice.amount}
